@@ -1,1 +1,3 @@
-# receipt-and-expense-management-platform-19095
+# Project Repository
+
+This is the initial README file for the project.
