@@ -1,0 +1,17 @@
+{
+  "title": "extracted_fields",
+  "type": "object",
+  "required": ["versionId", "key", "value", "createdAt"],
+  "properties": {
+    "_id": { "bsonType": "objectId" },
+    "versionId": { "bsonType": "objectId" },
+    "documentId": { "bsonType": ["objectId", "null"] },
+    "key": { "type": "string" },
+    "value": {},
+    "normalizedValue": {},
+    "type": { "enum": ["string", "number", "date", "boolean", "object", "array", null] },
+    "confidence": { "type": ["number", "integer", "null"] },
+    "createdAt": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,19 @@
+{
+  "title": "document_versions",
+  "type": "object",
+  "required": ["documentId", "version", "status", "createdAt", "sources"],
+  "properties": {
+    "_id": { "bsonType": "objectId" },
+    "documentId": { "bsonType": "objectId" },
+    "version": { "type": "integer", "minimum": 1 },
+    "status": { "enum": ["UPLOADED", "OCR_QUEUED", "OCR_RUNNING", "OCR_DONE", "EXTRACTED", "FAILED"] },
+    "sources": { "type": "object", "additionalProperties": true },
+    "ocr": { "type": "object", "additionalProperties": true },
+    "extraction": { "type": "object", "additionalProperties": true },
+    "categorization": { "type": "object", "additionalProperties": true },
+    "processing": { "type": "object", "additionalProperties": true },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": ["string", "null"], "format": "date-time" }
+  },
+  "additionalProperties": true
+}

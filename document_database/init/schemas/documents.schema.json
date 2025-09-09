@@ -1,0 +1,23 @@
+{
+  "title": "documents",
+  "type": "object",
+  "required": ["userId", "title", "status", "createdAt"],
+  "properties": {
+    "_id": { "bsonType": "objectId" },
+    "userId": { "bsonType": "objectId" },
+    "title": { "type": "string" },
+    "description": { "type": ["string", "null"] },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "status": { "enum": ["UPLOADED", "PROCESSING", "READY", "FAILED", "ARCHIVED"] },
+    "categoryId": { "bsonType": ["objectId", "null"] },
+    "latestVersionId": { "bsonType": ["objectId", "null"] },
+    "vendor": { "type": ["string", "null"] },
+    "currency": { "type": ["string", "null"] },
+    "totalAmount": { "type": ["number", "integer", "null"] },
+    "metadata": { "type": "object", "additionalProperties": true },
+    "notes": { "type": ["string", "null"] },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": ["string", "null"], "format": "date-time" }
+  },
+  "additionalProperties": true
+}

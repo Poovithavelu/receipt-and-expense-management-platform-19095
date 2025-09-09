@@ -1,0 +1,17 @@
+{
+  "title": "expense_categories",
+  "type": "object",
+  "required": ["name", "createdAt"],
+  "properties": {
+    "_id": { "bsonType": "objectId" },
+    "name": { "type": "string" },
+    "code": { "type": ["string", "null"] },
+    "description": { "type": ["string", "null"] },
+    "parentId": { "bsonType": ["objectId", "null"] },
+    "color": { "type": ["string", "null"] },
+    "rules": { "type": "array", "items": { "type": "object", "additionalProperties": true } },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": ["string", "null"], "format": "date-time" }
+  },
+  "additionalProperties": true
+}

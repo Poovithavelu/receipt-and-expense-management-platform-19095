@@ -1,0 +1,19 @@
+{
+  "title": "users",
+  "type": "object",
+  "required": ["email", "role", "status", "createdAt"],
+  "properties": {
+    "_id": { "bsonType": "objectId" },
+    "email": { "type": "string" },
+    "username": { "type": ["string", "null"] },
+    "role": { "enum": ["USER", "ADMIN", "MANAGER"] },
+    "status": { "enum": ["ACTIVE", "INVITED", "DISABLED"] },
+    "profile": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": ["string", "null"], "format": "date-time" }
+  },
+  "additionalProperties": true
+}

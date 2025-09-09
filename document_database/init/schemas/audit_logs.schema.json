@@ -1,0 +1,15 @@
+{
+  "title": "audit_logs",
+  "type": "object",
+  "required": ["action", "createdAt"],
+  "properties": {
+    "_id": { "bsonType": "objectId" },
+    "actorId": { "bsonType": ["objectId", "null"] },
+    "action": { "type": "string" },
+    "entity": { "type": ["string", "null"] },
+    "entityId": { "bsonType": ["objectId", "null"] },
+    "meta": { "type": "object", "additionalProperties": true },
+    "createdAt": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": true
+}
